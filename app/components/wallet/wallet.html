@@ -1,0 +1,131 @@
+<style>
+    .wallet-box-list {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .wallet-box {
+        position: relative;
+        display: inline-block;
+        width: 208px;
+        min-height: 73.6px;
+        padding-left: 64px;
+        padding-right: 16px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 0;
+        -webkit-transition: background-color 1600ms, opacity 400ms;
+        -moz-transition: background-color 1600ms, opacity 400ms;
+        -o-transition: background-color 1600ms, opacity 400ms;
+        transition: background-color 1600ms, opacity 400ms;
+    }
+    
+    .wallet-box>.dapp-identicon {
+        position: absolute;
+        left: 12px;
+        top: 20px;
+    }
+    
+    .dapp-identicon.dapp-small {
+        width: 32px;
+        height: 32px;
+        box-shadow: inset rgba(255, 255, 255, 0.4) 0 2px 2px, inset rgba(0, 0, 0, 0.4) 0 -2px 4px;
+    }
+    
+    .wallet-box>span {
+        position: relative;
+        clear: left;
+        float: left;
+        color: #827a7a;
+        font-size: 1.3em;
+        line-height: 1.35em;
+        display: inline-block;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+    .wallet-box .token-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 48px;
+    top: 4px;
+}
+.wallet-box:not(.create)>h3 {
+    display: inline-block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+}
+.wallet-box>h3 {
+    margin: 0;
+    margin-top: 4px;
+    color: #02a8f3;
+    max-width: 140.8px;
+    float: left;
+}
+.wallet-box>span {
+    position: relative;
+    clear: left;
+    float: left;
+    color: #827a7a;
+    font-size: 1.3em;
+    line-height: 1.35em;
+    display: inline-block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+}
+.wallet-box>span.account-id {
+    font-size: 0.8em;
+    line-height: 1.4em;
+    color: rgba(130, 122, 122, 0.6);
+}
+</style>
+<div class="dapp-content">
+    <div class="dapp-container">
+        <h1><strong>Accounts</strong> Overview</h1>
+        <h2>Accounts</h2>
+        <p>
+            Accounts are password protected keys that can hold ether, secure ethereum-based tokens or coins and control contracts. Accounts
+            can't display incoming transactions.
+        </p>
+        <div class="dapp-clear-fix"></div>
+        <div class="wallet-box-list">
+            <a href="javascript:void(0)" class="wallet-box">
+                <!-- <div class="account-pattern"> -->
+                <span class="dapp-identicon dapp-small"></span>
+                <!-- </div> -->
+                <ul class="token-list"></ul>
+                <h3>
+                    <i class="icon-key" title="Account"></i> Account 2
+                </h3>
+                <span class="account-balance">0.00<span>ether
+                <span class="account-id">0xbaBA96aa034303f86691c8A5cc819d4E2376175d</span>
+            </a>
+        </div>
+        <button class="wallet-box create account">
+            <div class="account-pattern">+</div>
+            <h3>Add Account</h3>
+        </button>
+        <h2>Wallet contracts</h2>
+        <p>
+            Once you have more than 1 ether you can create more sophisticated contracts. Wallets are one type of basic smart contract,
+            that allows your funds to be controlled by multiple accounts and have an optional daily limit on withdrawals,
+            to increase security. To create your own custom contracts go to the <em>Contracts</em> tab.
+        </p>
+        <div class="wallet-box-list"></div>
+        <div class="dapp-clear-fix"></div>
+        <h2>No transactions yet</h2>
+    </div>
+</div>
