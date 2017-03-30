@@ -1,13 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Light-Wallet</title>
     <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
-     <link rel="stylesheet" href="./components/menu/menu.css">
-<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body ng-app="">
-    <div ng-include="'./components/menu/menu.html'"></div>
+
+<body>
+    <header class="dapp-header">
+        <nav>
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="active">
+                        <i class="icon-wallet"></i>
+                        <span>Wallets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="icon-arrow-up"></i>
+                        <span>Send</span>
+                    </a>
+                </li>
+                <li class="block-info dapp-flex-item syncing">
+                    <span class="private-chain" title="You are on a testnet, DO NOT SEND any real ether to these addresses">TEST-NET</span>                    &nbsp;&nbsp;
+                    <span class="text">
+                                <i class="icon-feed"></i> 2 <span class="hide-on-small">peers</span>                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <i class="icon-layers"></i> 278,353 blocks left &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <i class="icon-cloud-download"></i> 0%
+                    <br>
+                    </span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <span class="sr-only">60% Complete</span>
+                        </div>
+                    </div>
+                    <!--<progress max="100" value="0"></progress>-->
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="icon-docs"></i>
+                        <span>Contracts</span>
+                    </a>
+                </li>
+                <li class="wallet-balance">
+                    <h3>Balance</h3>
+                    <span class="account-balance">0.00<span class="inline-form" name="unit">
+                        <button type="button" data-name="unit" data-value="ether" style="width: auto;">
+                        ETHER
+                    </button></span></span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content" ng-app style="padding-top: 70px">
+        <div ng-include="'./components/wallet/wallet.html'"></div>
+    </div>
+    <footer></footer>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="./assets/js/blockies.js"></script>
+    <script>
+        var icon = blockies.create({ // All options are optional
+            seed: '8a21589c6ac2413295d41d8955bffff', // seed used to generate icon data, default: random
+            //color: '#dfe', // to manually specify the icon color, default: random
+            //bgcolor: '#aaa', // choose a different background color, default: random
+            size: 15, // width/height of the icon in blocks, default: 8
+            scale: 3, // width/height of each block in pixels, default: 4
+            spotcolor: '#000' // each pixel has a 13% chance of being of a third color, 
+            // default: random. Set to -1 to disable it. These "spots" create structures
+            // that look like eyes, mouths and noses. 
+        });
+
+        document.body.appendChild(icon); // icon is a canvas element
+    </script>
 </body>
 </html>

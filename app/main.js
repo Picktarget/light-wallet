@@ -11,8 +11,8 @@ let mainWindow;
 
 function createWindow(){
     mainWindow = new BrowserWindow({
-        width:800,
-        height:600,
+        width:1067,
+        height:836,
         frame: true
     });
 
@@ -28,7 +28,7 @@ function createWindow(){
         mainWindow = null;
     });
     
-    mainWindow.setMenu(null);
+    // mainWindow.setMenu(null);
     // mainWindow.setMenuBarVisibility(false);
 }
 
