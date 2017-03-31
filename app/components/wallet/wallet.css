@@ -1,0 +1,216 @@
+h1 {
+    margin: 16px 0;
+    margin-bottom: 0;
+    font-weight: 100;
+    font-size: 2.2em;
+    line-height: 1.4em;
+    color: #827a7a;
+}
+
+h1 strong {
+    font-weight: 400;
+}
+
+h2 {
+    display: inline-block;
+    padding: 0 8px;
+    padding-bottom: 1px;
+    margin: 48px 0;
+    font-size: 1em;
+    text-transform: uppercase;
+    background: #827a7a;
+    color: #fafafa;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.dapp-clear-fix {
+    clear: both;
+}
+
+.wallet-box-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.wallet-box:last-child {
+    flex: 1 0 208px;
+    max-width: 432px;
+    margin-right: 0;
+}
+
+a,
+a:visited,
+button {
+    text-decoration: none;
+    color: #02a8f3;
+    outline: 0;
+}
+
+.wallet-box {
+    position: relative;
+    display: inline-block;
+    width: 208px;
+    min-height: 73.6px;
+    padding-left: 64px;
+    padding-right: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0;
+    -webkit-transition: background-color 1600ms, opacity 400ms;
+    -moz-transition: background-color 1600ms, opacity 400ms;
+    -o-transition: background-color 1600ms, opacity 400ms;
+    transition: background-color 1600ms, opacity 400ms;
+}
+
+.wallet-box>.dapp-identicon {
+    position: absolute;
+    left: 12px;
+    top: 20px;
+}
+
+.dapp-identicon.dapp-small {
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    box-shadow: inset rgba(255, 255, 255, 0.4) 0 2px 2px, inset rgba(0, 0, 0, 0.4) 0 -2px 4px;
+}
+
+.wallet-box>span {
+    position: relative;
+    clear: left;
+    float: left;
+    color: #827a7a;
+    font-size: 1.3em;
+    line-height: 1.35em;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.wallet-box .token-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 48px;
+    top: 4px;
+}
+
+.wallet-box>span.account-id {
+    font-size: 0.8em;
+    line-height: 1.4em;
+    color: rgba(130, 122, 122, 0.6);
+}
+
+.wallet-box:not(.create)>h3 {
+    display: inline-block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.wallet-box>h3 {
+    margin: 0;
+    margin-top: 4px;
+    color: #02a8f3;
+    max-width: 140.8px;
+    float: left;
+}
+
+.wallet-box>span.account-id {
+    font-size: 0.8em;
+    line-height: 1.4em;
+    color: rgba(130, 122, 122, 0.6);
+}
+
+.wallet-box.create {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: transparent;
+}
+
+.wallet-box .account-pattern {
+    position: absolute;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 44.8px;
+    padding: 0 16px;
+    background-color: #02a8f3;
+    text-align: center;
+    line-height: 100%;
+    color: #fafafa;
+    font-size: 1.8em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wallet-box.create h3 {
+    margin-top: 0;
+    text-align: left;
+}
+
+.wallet-box>h3 {
+    margin: 0;
+    margin-top: 4px;
+    color: #02a8f3;
+    max-width: 140.8px;
+    float: left;
+}
+
+h3 {
+    margin: 16px 0;
+    padding: 0;
+    color: rgba(130, 122, 122, 0.7);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    clear: both;
+}
+
+h2 {
+    display: inline-block;
+    padding: 0 8px;
+    padding-bottom: 1px;
+    margin: 48px 0;
+    font-size: 1em;
+    text-transform: uppercase;
+    background: #827a7a;
+    color: #fafafa;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
