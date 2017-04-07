@@ -6,21 +6,20 @@
             Accounts are password protected keys that can hold ether, secure ethereum-based tokens or coins and control contracts. Accounts can't display incoming transactions.
         </p>
         <div class="dapp-clear-fix"></div>
-        <div class="wallet-box-list" ng-controller="ctrl-wallet">
-            <a href="javascript:void(0)" class="wallet-box">
-                <!-- <div class="account-pattern"> -->
-                <span class="dapp-identicon dapp-small" ico-pixel>
+        <div class="wallet-box-list" ng-controller="walletCtrl">
+            <a href="javascript:void(0)" class="wallet-box" ng-repeat="item in accountItems">
+                <span class="dapp-identicon dapp-small">
+                    <ico-pixel how-to-fill="{{item.account_hash}}"></ico-pixel>
                 </span>
-                <!-- </div> -->
                 <ul class="token-list"></ul>
                 <h3>
-                    <i class="icon-key" title="Account"></i> Account 2
+                    <i class="icon-key" title="Account"></i>{{item.name}}
                 </h3>
-                <span class="account-balance">0.00<span>ether</span></span>
-                <span class="account-id">{{account_hash}}</span>
+                <span class="account-balance">{{item.money}}<span> ether</span></span>
+                <span class="account-id">{{item.account_hash}}</span>
             </a>
         </div>
-        <button class="wallet-box create account">
+        <button class="wallet-box create account" ng-click="testAdd()">
             <div class="account-pattern">+</div>
             <h3>Add Account</h3>
         </button>

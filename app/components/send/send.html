@@ -1,0 +1,93 @@
+<style>
+    .account-send-form>div.from-to select {
+        color: #02a8f3;
+        width: 100%;
+    }
+    
+    .dapp-address-input select,
+    .dapp-select-account select {
+        width: auto;
+        -webkit-appearance: none;
+        border-radius: 0;
+        height: 36px;
+        line-height: 18px;
+    }
+    
+    .dapp-address-input input,
+    .dapp-select-account input,
+    .dapp-address-input select,
+    .dapp-select-account select {
+        display: inline-block;
+        width: 300px;
+        max-width: 100%;
+        margin-top: 18.4px;
+        padding: 9.2px 16px;
+        padding-bottom: 6.13333333px;
+        border: 0;
+        border-bottom: solid 2px #dddcdb;
+        box-sizing: border-box;
+        background-color: #f5f4f2;
+        font-size: 1em;
+        font-weight: 300;
+        color: #4a90e2;
+        width: 440px;
+        z-index: 1;
+        margin-top: 0;
+        padding-left: 41.6px;
+        padding-right: 0;
+    }
+    
+    .dapp-address-input input {
+        border: 0;
+        border-bottom: solid 2px #ccc6c6;
+        background-color: #f5f4f2;
+        color: #02a8f3;
+        transition: opacity 1s;
+        width: 100%
+    }
+</style>
+<div class="container">
+    <form class="account-send-form" action="about:blank" target="dapp-form-helper-iframe" autocomplete="on">
+        <h1><strong>Send</strong> funds</h1>
+        <!-- from/to -->
+        <div class="row from-to">
+            <div class="col-sm-6">
+                <h3>From</h3>
+                <div class="dapp-select-account send-from">
+                    <select name="dapp-select-account" class="send-from"></select>
+                    <i class="no-identicon icon-"></i>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3>To</h3>
+                <div class="dapp-address-input">
+                    <input type="text" name="to" placeholder="0x000000.." class="to" autofocus="true">
+                </div>
+            </div>
+        </div>
+        <!-- amount -->
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Amount</h3>
+                <div class="dapp-address-input">
+                    <input type="text" name="to" placeholder="0.00" class="to">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="token-ether" style="margin-top: 57px;">
+                    <span class="balance">0.00 ETHER</span>
+                </div>
+            </div>
+        </div>
+        <!-- Total -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>total</h3>
+                <span class="amount">0.0066 ETHER</span>
+            </div>
+        </div>
+        <hr>
+        <!-- a button type="submit" will send the form -->
+        <a type="sumbit" class="btn btn-default">Send</a>
+    </form>
+</div>
