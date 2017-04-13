@@ -1,11 +1,7 @@
-(function() {
+define(['angular', 'angularRoute'], function(angular) {
+    var app = angular.module('wallet', ['ngRoute', 'walletModule', 'myModal']);
     var template_path = './components/';
-    var router_config = angular.module('wallet', [
-        'ngRoute',
-        'walletModule',
-        'myModal'
-    ]);
-    router_config.config(['$routeProvider', function($routeProvider) {
+    return app.config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: template_path + 'wallet/wallet.html',
@@ -18,9 +14,7 @@
                 templateUrl: template_path + 'contract/contract.html',
             })
             .otherwise({ redirectTo: '/' });
-    }]);
-
-    router_config.controller('NavbarCtrl', function($scope) {
+    }]).controller('NavbarCtrl', function($scope) {
         $scope.isActive0 = true;
         $scope.isActive1 = false;
         $scope.isActive2 = false;
@@ -42,4 +36,4 @@
             }
         }
     });
-})();
+});

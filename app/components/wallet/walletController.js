@@ -1,6 +1,7 @@
-(function() {
+define(function() {
+    'use strict';
     var walletModule = angular.module('walletModule', []);
-    walletModule.controller('walletCtrl', ['$scope', function($scope) {
+    return walletModule.controller('walletCtrl', ['$scope', function($scope) {
         $scope.accountItems = [{
                 account_hash: '0xbaBA96aa034303f86691c8A5cc819d4E2376175d',
                 name: 'main account',
@@ -33,7 +34,7 @@
                 modal: true,
                 frame: true
             });
-            child.on('close', function() { win = null })
+            child.on('close', function() { child = null });
             child.on('blur', function() {
                 console.log('blur');
                 child.showInactive();
@@ -50,8 +51,7 @@
 
             child.show();
         }
-    }]);
-    walletModule.directive('icoPixel', function() {
+    }]).directive('icoPixel', function() {
         return {
             restrict: 'AE',
             scope: {},
@@ -73,4 +73,4 @@
             }
         }
     });
-})();
+});
