@@ -26,9 +26,6 @@ function createWindow() {
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
-
-    // mainWindow.setMenu(null);
-    // mainWindow.setMenuBarVisibility(false);
 }
 
 app.on('ready', createWindow);

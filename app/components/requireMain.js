@@ -15,7 +15,7 @@ requirejs.config({
         },
         angularRoute: {
             deps: ["angular"],
-            exports: 'angularRoute'
+            exports: 'angularRou te'
         },
         ui_bootstrap_tpls: {
             deps: ["angular"],

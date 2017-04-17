@@ -1,7 +1,7 @@
 define(function() {
     'use strict';
     var walletModule = angular.module('walletModule', []);
-    return walletModule.controller('walletCtrl', ['$scope', function($scope) {
+    return walletModule.controller('walletCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.accountItems = [{
                 account_hash: '0xbaBA96aa034303f86691c8A5cc819d4E2376175d',
                 name: 'main account',
@@ -50,6 +50,22 @@ define(function() {
             }));
 
             child.show();
+            var timestamp = new Date().getTime();
+            var str = { "id": timestamp, "method": "test", "params": {} };
+            str = JSON.stringify(str);
+            var req = {
+                method: 'POST',
+                url: 'http://127.0.0.1:8081/json/',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: str
+            }
+            $http(req).then(function successCallback(response) {
+                alert('success ' + response.data.error.message);
+            }, function errorCallback(response) {
+                alert('error' + response);
+            });
         }
     }]).directive('icoPixel', function() {
         return {
